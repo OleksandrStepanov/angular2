@@ -5,5 +5,6 @@ import { Component } from '@angular/core'
   templateUrl: './server.component.html'
 })
 export class ServerComponent {
-
+  serverId: number = 123;
+  serverName: string = 'Nginx';
 }
