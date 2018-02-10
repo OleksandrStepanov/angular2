@@ -6,9 +6,17 @@ import { Component } from '@angular/core'
 })
 export class ServerComponent {
   serverId: number = 123;
-  serverName: string = 'Nginx';
+  serverName: string = 'offline';
+
+  constructor() {
+    this.serverName = Math.random() > 0.5 ? 'online' : 'offline';
+  }
 
   getServerStatus() {
     return this.serverName;
+  }
+
+  getColor() {
+    return this.serverName === 'online' ? 'green' : 'red';
   }
 }
