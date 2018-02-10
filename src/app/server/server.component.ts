@@ -7,4 +7,8 @@ import { Component } from '@angular/core'
 export class ServerComponent {
   serverId: number = 123;
   serverName: string = 'Nginx';
+
+  getServerStatus() {
+    return this.serverName;
+  }
 }
